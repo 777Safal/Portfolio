@@ -28,7 +28,8 @@ function Project() {
                     </div>
                     <div className='px-5'>
                         <h1 className='text-center text-lg my-3 font-medium'>{val.h1}</h1>
-                        <p className='text-center text-sm'>{val.p}</p>
+                        <p className='text-center 
+                        text-sm'>{val.p}</p>
                     </div>
                 </div>
             })}

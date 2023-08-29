@@ -7,16 +7,18 @@ import Navbar from './Portfolio/Navbar'
 import Contact from './Portfolio/Contact'
 import Resume from './Portfolio/Resume'
 import Project from './Portfolio/Project'
+import CV from './Portfolio/CV'
 
 function App() {
 
   return (
    <div>
-    <Navbar/>
+    {/* <Navbar/>
     <Portfolio/>
     <Contact/>
     <Resume/>
-    <Project/>
+    <Project/> */}
+    <CV/>
    </div> 
   )
 }
