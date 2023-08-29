@@ -23,13 +23,14 @@ function CV() {
       {h1:'ReactJS '},
       {h1:'Javascript'},
     ]
+    const intro={p:'Innovative Full-stack developer eligible for building and maintaining responsive design, Proficient in HTML, Tailwind CSS, JavaScript,React Js.'}
   return (
     <div className='flex'>
 {/* left side */}
-        <div className='w-1/4 pt-7 pl-12 pr-8 text-zinc-900 bg-amber-400'>
+        <div className='w-1/4 pt-7 pl-12 pr-8 text-slate-100 bg-zinc-900'>
   {/* contact */}
           <div className=''>
-          <div ><h1 className='uppercase text-xl font-bold pb-1 border-b-2 border-zinc-900'>contact</h1></div>
+          <div ><h1 className='uppercase text-xl font-bold pb-1 border-b-2 border-slate-100'>contact</h1></div>
           <div className='mt-2 text-base'>
           {data.map((val,i)=>{
             return <div key={i} className='mb-2 flex items-center'>
@@ -41,7 +42,7 @@ function CV() {
           </div>
   {/* Education */}
           <div className='my-6'>
-            <div><h1 className='uppercase text-xl font-bold pb-1 border-b-2 border-zinc-900'>Education</h1></div>
+            <div><h1 className='uppercase text-xl font-bold pb-1 border-b-2 border-slate-100'>Education</h1></div>
             <div className='mt-2'>
               {education.map((val,i)=>{
                 return <div key={i}>
@@ -56,7 +57,7 @@ function CV() {
           </div>
   {/* Skills */}
           <div className='my-6'>
-            <div><h1 className='uppercase text-xl font-bold pb-1 border-b-2 border-zinc-900'>Skills</h1></div>
+            <div><h1 className='uppercase text-xl font-bold pb-1 border-b-2 border-slate-100'>Skills</h1></div>
             <ul className='mt-2 pl-4'>
               {skills.map((val,i)=>{
                 return <li key={i} className='text-sm font-medium list-disc'>
@@ -67,8 +68,14 @@ function CV() {
           </div>
         </div>
 {/* right side */}
-        <div className='w-3/4 bg-zinc-900 text-amber-400'>
-          jakaj
+        <div className='w-3/4 pt-7 bg-slate-100 text-zinc-900'>
+          <div className='pl-16 py-6 bg-red-500'>
+            <h1 className='text-5xl font-bold'>Safal Thapa</h1>
+            <p className='text-lg font-medium'>Full-stack Developer</p>
+          </div>
+          <div className='pl-16 pr-24 my-3'>
+              <p className='text-base font-medium'>{intro.p}</p>
+          </div>
         </div>
     </div>
   )
