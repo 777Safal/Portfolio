@@ -19,9 +19,9 @@ function Project() {
        <div className='px-10'>
        <div className='my-5 flex justify-between'>
             {data.map((val,i)=>{
-                return <div key={i} className='bg-blue-300 w-80 h-96 rounded-md overflow-y-scroll'>
+                return <div key={i} className='w-80 h-96 rounded-md overflow-y-scroll'>
                     <div className='w-60 h-72 mx-auto'
-                     style={{ 
+                     style={{
                         backgroundImage: `url(${val.name})`,
                          backgroundSize: 'cover',
                          backgroundPosition:'center'}}>
