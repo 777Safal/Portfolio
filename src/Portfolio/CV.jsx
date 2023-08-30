@@ -24,6 +24,20 @@ function CV() {
       {h1:'Javascript'},
     ]
     const intro={p:'Innovative Full-stack developer eligible for building and maintaining responsive design, Proficient in HTML, Tailwind CSS, JavaScript,React Js.'}
+    const experience=[
+      {status:'I am currently serving as a dedicated Frontend Developer intern at HUBIT, where I am actively contributing to web development projects. Throughout my internship, I have been honing my skills in building responsive and visually appealing user interfaces using modern web technologies. Collaborating with the development team, I have gained hands-on experience in translating design concepts into functional and interactive web applications. This opportunity at HUBIT has provided me with invaluable insights into the world of frontend development, helping me refine my coding proficiency and problem-solving abilities within a professional. environment'}
+    ]
+    const project=[
+      {h1:' Futsal Booking',
+        p:'An online futsal booking website project revolved around designing a user-friendly interface, implementing efficient booking processes.',
+        name:'https://img.freepik.com/free-vector/abstract-soccer-tournament-background-grunge-style_1017-14108.jpg?w=740&t=st=1693069753~exp=1693070353~hmac=e779b4da8054d48bfe522de618e4ab42eb791d3a44f923f52723b4e9bd1ba6d6'},
+        {h1:' Pizza Delivery',
+        p:'An online futsal booking website project revolved around designing a user-friendly interface, implementing efficient booking processes.',
+        name:'https://img.freepik.com/premium-vector/twenty-four-hours-pizza-delivery-cartoon-flyer_82574-11249.jpg?w=740'},
+        {h1:' Airway ticket booking',
+        p:'An online futsal booking website project revolved around designing a user-friendly interface, implementing efficient booking processes.',
+        name:'https://img.freepik.com/free-psd/flat-design-travel-agency-template_23-2149611339.jpg?w=740&t=st=1693071276~exp=1693071876~hmac=7bd8ed7b4942292f7e68fe81f5529119e890417e7e67489ddbdf0f76a51f150a'},
+    ]
   return (
     <div className='flex'>
 {/* left side */}
@@ -69,12 +83,35 @@ function CV() {
         </div>
 {/* right side */}
         <div className='w-3/4 pt-7 bg-slate-100 text-zinc-900'>
-          <div className='pl-16 py-6 bg-red-500'>
+      {/* Intro */}
+          <div className='pl-16 py-6'>
             <h1 className='text-5xl font-bold'>Safal Thapa</h1>
             <p className='text-lg font-medium'>Full-stack Developer</p>
           </div>
           <div className='pl-16 pr-24 my-3'>
               <p className='text-base font-medium'>{intro.p}</p>
+          </div>
+  {/* another section */}
+          <div className='pl-16 pr-24'>
+            {/* Experience */}
+            <div>
+              <h1 className='pb-1 border-b-2 border-zinc-900 uppercase text-xl font-bold mb-5'>Experience</h1>
+              <div className='pl-6'>
+                <p className='max-w-[85ch] text-justify'>{experience[0].status}</p>
+              </div>
+            </div>
+            {/* Projects */}
+            <div className='my-5'>
+              <h1 className='pb-1 border-b-2 border-zinc-900 uppercase text-xl font-bold mb-5'>Projects</h1>
+              {project.map((val,i)=>{
+                return <div key={i} className='my-3'>
+                  <h1 className='font-medium'>{val.h1}</h1>
+                  <ul className='ml-24'>
+                    <li className='max-w-[80ch] list-disc leading-5 tracking-wide'>{val.p}</li>
+                  </ul>
+                </div>
+              })}
+            </div>
           </div>
         </div>
     </div>
