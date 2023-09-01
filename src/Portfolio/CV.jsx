@@ -1,11 +1,11 @@
-import React from 'react'
-import {GiSmartphone} from 'react-icons/gi'
-import {MdEmail} from 'react-icons/md'
-import {MdLocationPin}from 'react-icons/md'
-import {BiLogoFacebook} from 'react-icons/bi'
-import {BsGithub} from 'react-icons/bs'
+import * as React from 'react'
+import {GiSmartphone} from 'react-icons/gi';
+import {MdEmail} from 'react-icons/md';
+import {MdLocationPin}from 'react-icons/md';
+import {BiLogoFacebook} from 'react-icons/bi';
+import {BsGithub} from 'react-icons/bs';
 
-function CV() {
+const CV=React.forwardRef(({}, ref)=> {
     const data=[
       {h1:"9866694728",h2:'98007622436',icon:<GiSmartphone/>},
       {h1:"tsafal06@gmail.com",icon:<MdEmail/>},
@@ -42,7 +42,7 @@ function CV() {
         name:'https://img.freepik.com/free-psd/flat-design-travel-agency-template_23-2149611339.jpg?w=740&t=st=1693071276~exp=1693071876~hmac=7bd8ed7b4942292f7e68fe81f5529119e890417e7e67489ddbdf0f76a51f150a'},
     ]
   return (
-    <div id='cv' className='flex'>
+    <div ref={ref} id='cv' className='flex'>
 {/* left side */}
         <div className='w-1/4 pt-7 pl-12 pr-8 text-slate-100 bg-zinc-900'>
   {/* contact */}
@@ -119,6 +119,6 @@ function CV() {
         </div>
     </div>
   )
-}
+})
 
 export default CV

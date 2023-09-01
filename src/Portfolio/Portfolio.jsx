@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Portfolio() {
     const data=[
         {h1:'My name is Safal Thapa.'},
@@ -13,6 +14,9 @@ function Portfolio() {
                   <h1 className='uppercase text-3xl font-medium'>hello</h1>
                   <p className='text-3xl'>{data[0].h1}</p>
                   <p className='text-2xl w-72'>{data[1].h1}</p>
+                  <div className='w-10 h-10 '>
+                    <img src="" alt="" />
+                  </div>
                 </div>
             </div>
             <div className='w-2/5 pr-5 flex justify-center items-center'>
