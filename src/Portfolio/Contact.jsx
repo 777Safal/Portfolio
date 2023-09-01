@@ -3,7 +3,7 @@ import {Form,Field,ErrorMessage,Formik} from 'formik'
 import {MdOutlinePhoneAndroid} from 'react-icons/md'
 import {MdEmail} from 'react-icons/md'
 import {FaFacebookF} from 'react-icons/fa'
-import {BiLogoInstagramAlt} from 'react-icons/bi'
+import {BsGithub} from 'react-icons/bs'
 import * as yup from 'yup'
 
 const schema=yup.object().shape({
@@ -16,10 +16,10 @@ const schema=yup.object().shape({
 
 function Contact() {
     const listdata=[
-        {h1:'tsafal06@gmail.com'},
-        {h1:'+9779866694728'},
-        {h1:'Safal Thapa'},
-        {h1:'lafas07'},
+        {h1:'tsafal06@gmail.com',textcolor:'text-slate-700',icon:<MdEmail/>},
+        {h1:'+9779866694728',textcolor:'text-red-400',icon:<MdOutlinePhoneAndroid/>},
+        {h1:'https://www.facebook.com/',textcolor:'text-blue-600',icon:<FaFacebookF/>},
+        {h1:'https://github.com/777Safal' ,textcolor:'text-zinc-800',icon:<BsGithub/>},
     ]
     const formdata=[
         {label:'First Name',
@@ -45,22 +45,14 @@ function Contact() {
                 <h1 className='text-2xl font-medium mt-7'>Contact</h1>
                 <p className='mt-3 mb-5'>Looking forward to hear from you.</p>
                 <div className='pl-10 grid grid-rows-5 gap-2'>
-                    <div className='flex items-center text-base'>
-                    <MdOutlinePhoneAndroid className='text-3xl mr-2 text-slate-700'/>
-                    <h1>{listdata[1].h1}</h1>
-                    </div>
-                    <div className='flex items-center'>
-                    <MdEmail className='text-3xl mr-2 text-red-400'/>
-                    <h1>{listdata[0].h1}</h1>
-                    </div>
-                    <div className='flex items-center'>
-                    <FaFacebookF className='text-3xl mr-2 text-blue-600'/>
-                    <h1>{listdata[2].h1}</h1>
-                    </div>
-                    <div className='flex items-center'>
-                    <BiLogoInstagramAlt className='text-3xl mr-2 text-blue-600'/>
-                    <h1>{listdata[3].h1}</h1>
-                    </div>
+                    {
+                        listdata.map((val,i)=>{
+                            return <div key={i} className='flex items-center text-base'>
+                                <div className='bg-amber-400 w-8 h-8 flex justify-center items-center rounded-full text-xl mr-2'>{val.icon}</div>
+                            <h1>{val.h1}</h1>
+                            </div>
+                        })
+                    }
                 </div>
             </div>
             <div className='w-3/5 bg-amber-400'>

@@ -16,7 +16,10 @@ function CV() {
     const education=[
       {h1:'Higher Secondary Eduacation',
       p:'AIMS College / Butwal, Nepal / june, 2017-August, 2019',
-      p2:'Managment (Finance) with grade B'}
+      p2:'Managment (Finance) with grade B'},
+      {h1:'Degree of Bachelor',
+      p:"Lumbini city college / Butwal, Nepal / August, 2019- ongoing",
+      p2:'Bachelor in Information Managament (BIM)'}
     ]
     const skills=[
       {h1:'HTML / CSS '},
@@ -39,7 +42,7 @@ function CV() {
         name:'https://img.freepik.com/free-psd/flat-design-travel-agency-template_23-2149611339.jpg?w=740&t=st=1693071276~exp=1693071876~hmac=7bd8ed7b4942292f7e68fe81f5529119e890417e7e67489ddbdf0f76a51f150a'},
     ]
   return (
-    <div className='flex'>
+    <div id='cv' className='flex'>
 {/* left side */}
         <div className='w-1/4 pt-7 pl-12 pr-8 text-slate-100 bg-zinc-900'>
   {/* contact */}
@@ -59,7 +62,7 @@ function CV() {
             <div><h1 className='uppercase text-xl font-bold pb-1 border-b-2 border-slate-100'>Education</h1></div>
             <div className='mt-2'>
               {education.map((val,i)=>{
-                return <div key={i}>
+                return <div key={i} className='my-5'>
                   <h1 className='text-lg font-medium leading-5'>{val.h1}</h1>
                   <p className='text-sm my-1 font-medium leading-5'>{val.p}</p>
                   <ul className='pl-4'>

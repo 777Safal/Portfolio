@@ -6,12 +6,14 @@ function Navbar() {
         {h1:'Contact'},
         {h1:'Project'},
         {h1:'Resume'},
+        {h1:"CV"}
     ]
     const href=[
         '#',
         '#contact',
         '#project',
         '#resume',
+        '#cv',
     ]
   return (
     <div className='w-full flex justify-center'>

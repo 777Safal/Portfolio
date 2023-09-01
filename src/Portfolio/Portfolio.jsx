@@ -2,7 +2,7 @@ import React from 'react'
 
 function Portfolio() {
     const data=[
-        {h1:'Hello my name is Safal Thapa.'},
+        {h1:'My name is Safal Thapa.'},
         {h1:'In the journey to be a good coder.'}
     ]
   return (
@@ -23,6 +23,9 @@ function Portfolio() {
                 bg-[url(https://scontent.fktm18-1.fna.fbcdn.net/v/t39.30808-6/274978817_3219675714918831_630412150615376665_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=1UPh1ShAuLgAX9UvRKB&_nc_ht=scontent.fktm18-1.fna&oh=00_AfD2XC19yyUF4gXAKBht8nAOzzT44JwrecKUaty1xHvc7w&oe=64EC6D5E)]
                 '>
                 </div>
+            </div>
+            <div>
+              <button></button>
             </div>
         </div>
     </div>
