@@ -16,7 +16,7 @@ function Resume() {
     ]
     
   return (
-    <div id='resume' className='w-10/12 px-5 py-7 bg-slate-100 mx-auto'>
+    <div id='resume' className='w-10/12 mt-10 px-5 py-7 bg-slate-100 mx-auto'>
         <h1 className='text-2xl font-medium '>Resume</h1>
         <div className='mt-5'>
            {tabledata.map((val,i)=>{

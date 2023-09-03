@@ -1,10 +1,7 @@
-import React,
-{useRef} from 'react'
-import ReactToPrint from 'react-to-print';
-import CV from './CV';
+import React from 'react'
+
 function Navbar() {
 
-    const refdata=useRef()
     const data=[
         {h1:'Home'},
         {h1:'Contact'},
@@ -32,14 +29,7 @@ function Navbar() {
                 })}
             </ul>
         </nav>
-        <ReactToPrint
-        documentTitle="Safal_CV"
-        trigger={() => <button className=''>Downlad CV</button>}
-        content={() => refdata.current}
-      />
-       <div className='hidden'>
-       <CV ref={refdata} />
-       </div>
+        
     </div>
   )
 }

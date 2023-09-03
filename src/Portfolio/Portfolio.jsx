@@ -1,7 +1,10 @@
-import React from 'react'
-
+import React,
+{useRef} from 'react'
+import ReactToPrint from 'react-to-print';
+import CV from './CV';
 
 function Portfolio() {
+  const refdata=useRef()
     const data=[
         {h1:'My name is Safal Thapa.'},
         {h1:'In the journey to be a good coder.'}
@@ -14,6 +17,15 @@ function Portfolio() {
                   <h1 className='uppercase text-3xl font-medium'>hello</h1>
                   <p className='text-3xl'>{data[0].h1}</p>
                   <p className='text-2xl w-72'>{data[1].h1}</p>
+
+                  <ReactToPrint
+        documentTitle="Safal_CV"
+        trigger={() => <button className='mt-10 w-48 py-2 bg-yellow-300 hover:bg-zinc-700 hover:text-yellow-300'>Downlad CV</button>}
+        content={() => refdata.current}/>
+       <div className='hidden'>
+       <CV ref={refdata} />
+       </div>
+
                   <div className='w-10 h-10 '>
                     <img src="" alt="" />
                   </div>
@@ -28,9 +40,7 @@ function Portfolio() {
                 '>
                 </div>
             </div>
-            <div>
-              <button></button>
-            </div>
+            
         </div>
     </div>
   )
