@@ -20,18 +20,18 @@ function Resume() {
         <h1 className='text-2xl font-medium '>Resume</h1>
         <div className='mt-5'>
            {tabledata.map((val,i)=>{
-            return <div key={i} className='grid grid-cols-3 border-b-2 border-amber-400 py-5'>
-              <div>{val.h1}</div>
-              <div>{val.yr}</div>
+            return <div key={i} className='md:grid md:grid-cols-3 border-b-2 border-amber-400 py-5'>
+              <div className='md:font-normal font-semibold'>{val.h1}</div>
+              <div className='md:text-base text-sm'>{val.yr}</div>
               <div>{val.status}</div>
             </div>
            })}
-           <div className='grid grid-cols-3 py-7 border-b-2 border-amber-400'>
-            <div><h1>Skills</h1></div>
+           <div className='md:grid md:grid-cols-3 py-7 border-b-2 border-amber-400'>
+            <div><h1 className='md:font-normal font-semibold'>Skills</h1></div>
             <div></div>
             <ul>
             {skills.map((val,i)=>{
-            return <li key={i} className='text-sm list-disc'>
+            return <li key={i} className='text-sm list-disc md:ml-0 ml-5'>
                 {val.h1}
             </li>
            })}

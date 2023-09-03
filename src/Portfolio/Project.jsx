@@ -17,16 +17,16 @@ function Project() {
         <div className='pl-5'><h1 className='text-2xl font-medium mt-7'>Project</h1></div>
         <div className='pl-8 mt-2'><p>Some of the sample of my work.</p></div>
        <div className='px-10'>
-       <div className='my-5 flex justify-between'>
+       <div className='my-5 md:flex md:justify-between'>
             {data.map((val,i)=>{
-                return <div key={i} className='w-80 h-96 rounded-md overflow-y-scroll'>
-                    <div className='w-60 h-72 mx-auto'
+                return <div key={i} className='md:w-80 w-full md:h-96 my-3 md:bg-transparent bg-yellow-300 rounded-md  flex md:flex-col flex-row'>
+                    <div className='md:w-60 w-2/4 md:h-72 md:mx-auto'
                      style={{
                         backgroundImage: `url(${val.name})`,
                          backgroundSize: 'cover',
                          backgroundPosition:'center'}}>
                     </div>
-                    <div className='px-5'>
+                    <div className='md:px-5 px-1 md:w-full w-2/4'>
                         <h1 className='text-center text-lg my-3 font-medium'>{val.h1}</h1>
                         <p className='text-center 
                         text-sm'>{val.p}</p>
