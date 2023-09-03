@@ -1,6 +1,24 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
+
 
 function Navbar() {
+
+    const [showScroll,setShowScroll]=useState(false)
+    useEffect(() => {
+      window.addEventListener('scroll',actioning)
+    
+      return () => {
+        window.removeEventListener('scroll',actioning)
+      }
+    }, [])
+    const actioning=()=>{
+        if(window.scrollY > 100){
+            setShowScroll(true);
+        }
+        else {
+            setShowScroll(false);
+        }
+    }
 
     const data=[
         {h1:'Home'},
@@ -16,7 +34,7 @@ function Navbar() {
     ]
 
   return (
-    <div className='w-full flex justify-center'>
+    <div className={`${showScroll? 'fixed top-0 z-50 w-screen':'relative  w-screen'} w-screen bg-white flex justify-center`}>
         <nav className='w-10/12 h-16 flex items-center justify-end'>
             <ul className='flex'>
                 {data.map((val,i)=>{
