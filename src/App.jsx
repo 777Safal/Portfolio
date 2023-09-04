@@ -9,12 +9,14 @@ import Resume from './Portfolio/Resume'
 import Project from './Portfolio/Project'
 import CV from './Portfolio/CV'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Menu from './Portfolio/CV/Menu'
 
 function App() {
 
   return (
    <div>
     <Navbar/>
+    {/* <Menu/> */}
     <Portfolio/>
     <Contact/>
     <Project/>

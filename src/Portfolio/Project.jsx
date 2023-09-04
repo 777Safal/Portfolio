@@ -19,15 +19,15 @@ function Project() {
        <div className='px-10'>
        <div className='my-5 lg:flex lg:justify-between'>
             {data.map((val,i)=>{
-                return <div key={i} className='lg:w-80 md:w-11/12 w-full mx-auto lg:h-96 my-3 lg:bg-transparent bg-yellow-300 rounded-md  flex lg:flex-col flex-row overflow-hidden'>
-                    <div className='lg:w-60 md:w-2/6 w-2/4  md:h-64 lg:mx-auto'
+                return <div key={i} className='lg:w-80 md:w-11/12 w-full mx-auto lg:h-96 my-3 lg:bg-transparen sm:bg-blue-400 rounded-md  flex flex-col overflow-hidden'>
+                    <div className='w-full  h-80  lg:mx-auto'
                      style={{
                         backgroundImage: `url(${val.name})`,
                          backgroundSize: 'cover',
                          backgroundRepeat:'no-repeat',
                          backgroundPosition:'center'}}>
                     </div>
-                    <div className='lg:px-5 px-1 lg:w-full md:w-4/6 w-2/4 flex flex-col justify-center items-center'>
+                    <div className='lg:px-5 px-1 w-full flex flex-col justify-center items-center'>
                         <h1 className='text-center text-lg my-3 font-medium'>{val.h1}</h1>
                         <p className='text-center 
                         text-sm'>{val.p}</p>

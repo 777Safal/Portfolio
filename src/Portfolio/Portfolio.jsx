@@ -33,7 +33,7 @@ function Portfolio() {
             </div>
             <div className='md:w-2/5 w-full pr-5 flex justify-center items-center'>
                 <div className='lg:w-[400px] lg:h-[61vh] md:w-[280px] md:h-[45vh] w-11/12 h-60 md:rounded-full rounded-sm bg-cover
-                bg-no-repeat drop-shadow-2xl bg-red-400 bg-center
+                bg-no-repeat drop-shadow-2xl bg-red-400 md:bg-center bg-top
                 bg-[url(https://scontent.fktm18-1.fna.fbcdn.net/v/t39.30808-6/274978817_3219675714918831_630412150615376665_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=1UPh1ShAuLgAX9UvRKB&_nc_ht=scontent.fktm18-1.fna&oh=00_AfD2XC19yyUF4gXAKBht8nAOzzT44JwrecKUaty1xHvc7w&oe=64EC6D5E)]
                 '>
                 </div>
