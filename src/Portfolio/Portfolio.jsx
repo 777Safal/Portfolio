@@ -20,7 +20,7 @@ function Portfolio() {
 
                   <ReactToPrint
         documentTitle="Safal_CV"
-        trigger={() => <button className='mt-10 md:w-48 w-32 py-2 bg-yellow-300 hover:bg-zinc-700 hover:text-yellow-300'>Downlad CV</button>}
+        trigger={() => <button className='mt-10 lg:w-48 w-32 py-2 md:text-base text-sm bg-yellow-300 hover:bg-zinc-700 hover:text-yellow-300'>Downlad CV</button>}
         content={() => refdata.current}/>
        <div className='hidden'>
        <CV ref={refdata} />

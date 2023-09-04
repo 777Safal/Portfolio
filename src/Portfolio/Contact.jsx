@@ -39,23 +39,23 @@ function Contact() {
         identiy:'message'},
     ]
   return (
-    <div id='contact' className='md:h-[70vh] my-10'>
-        <div className='w-10/12 h-full mx-auto md:flex bg-slate-100'>
-            <div className='md:w-2/5 w-full pl-5'>
+    <div id='contact' className='lg:h-[70vh] my-10'>
+        <div className='w-10/12 h-full mx-auto lg:flex bg-slate-100'>
+            <div className='lg:w-2/5  w-full pl-5'>
                 <h1 className='text-2xl font-medium mt-7 pt-2'>Contact</h1>
                 <p className='mt-3 md:mb-5 mb-3 text-sm md:text-base'>Looking forward to hear from you.</p>
-                <div className='pl-10 grid grid-rows-5 gap-2'>
+                <div className='w-fit mx-auto grid grid-rows-4 sm:grid sm:grid-cols-2 gap-2 lg:grid-cols-1 lg:gap-0 lg:mb-0 mb-2'>
                     {
                         listdata.map((val,i)=>{
-                            return <div key={i} className='flex items-center md:text-base text-sm'>
+                            return <div key={i} className='flex lg:my-2  items-center md:text-base text-sm'>
                                 <div className='bg-amber-400 md:w-8 w-5 md:h-8 h-5 flex justify-center items-center rounded-full md:text-xl text-sm mr-2'>{val.icon}</div>
-                            <h1>{val.h1}</h1>
+                            <h1 className='text-sm'>{val.h1}</h1>
                             </div>
                         })
                     }
                 </div>
             </div>
-            <div className='md:w-3/5 w-full bg-amber-400'>
+            <div className='lg:w-3/5 w-full bg-amber-400'>
                 <Formik
                 initialValues={{
                     firstname:'',
@@ -71,7 +71,7 @@ function Contact() {
                 >
                     {({handleSubmit})=>{
                         return <Form onSubmit={handleSubmit}>
-                            <div className='w-11/12 pt-7 md:flex md:flex-wrap mx-auto'>
+                            <div className='w-11/12 lg:pt-7 pt-5 md:flex md:flex-wrap mx-auto'>
                                 {formdata.map((val,i)=>{
                                     if (val.identiy==='message'){
                                         return <div key={i} className='px-2 my-3 w-full flex flex-col'>
@@ -88,8 +88,8 @@ function Contact() {
                                     }
                                 })}
                             </div>
-                            <div className='md:ml-9 ml-6 mt-3 md:mb-0'>
-                                <button type='submit' className='md:px-8 md:mb-0 mb-3 md:py-3 px-3 py-2 text-amber-400 md:text-lg text-base font-medium bg-slate-100 rounded-sm border border-slate-100 hover:bg-amber-400 hover:text-slate-100'>Submit</button>
+                            <div className='md:ml-9 ml-6 mt-3'>
+                                <button type='submit' className='lg:px-8 lg:mb-0 mb-3 lg:py-3 px-3 py-2 text-amber-400 md:text-lg text-base font-medium bg-slate-100 rounded-sm border border-slate-100 hover:bg-amber-400 hover:text-slate-100'>Submit</button>
                             </div>
                         </Form>
                     }}
