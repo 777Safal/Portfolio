@@ -10,17 +10,17 @@ import Project from './Portfolio/Project'
 import CV from './Portfolio/CV'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Menu from './Portfolio/CV/Menu'
+import Motion from './Practice/Motion'
 
 function App() {
 
   return (
    <div>
-    <Navbar/>
-    {/* <Menu/> */}
+    {/* <Navbar/>
     <Portfolio/>
     <Contact/>
     <Project/>
-    <Resume/>
+    <Resume/> */}
     {/* <CV/> */}
       {/* <Router>
         <Routes>
@@ -28,6 +28,9 @@ function App() {
           <Route exact path='/cv' element={<CV/>}/>
         </Routes>
       </Router> */}
+
+
+      <Motion/>
 
    </div> 
   )
