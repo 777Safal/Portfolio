@@ -2,6 +2,7 @@ import React,
 {useRef} from 'react'
 import ReactToPrint from 'react-to-print';
 import CV from './CV';
+import {motion} from 'framer-motion'
 
 function Portfolio() {
   const refdata=useRef()
@@ -20,7 +21,10 @@ function Portfolio() {
 
                   <ReactToPrint
         documentTitle="Safal_CV"
-        trigger={() => <button className='mt-10 lg:w-48 w-32 py-2 md:text-base text-sm bg-yellow-300 hover:bg-zinc-700 hover:text-yellow-300'>Downlad CV</button>}
+        trigger={() => 
+          <motion.button 
+          whileHover={{scale: 1.1,}}
+          className='mt-10 lg:w-48 w-32 py-2 md:text-base text-sm bg-yellow-300 hover:bg-zinc-700 hover:text-yellow-300'>Downlad CV</motion.button>}
         content={() => refdata.current}/>
        <div className='hidden'>
        <CV ref={refdata} />
